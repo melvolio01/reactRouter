@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   Link,
-  useRoutMatch,
   useLocation,
   useRouteMatch
 } from 'react-router-dom';

@@ -36,6 +36,9 @@ const Players = () => {
         <Route path={`${url}/:playerId`}>
           <Player players={players} />
         </Route>
+        <Route path='*'>
+          <div className="sidebar-instruction">Select a player</div>
+        </Route>
       </Switch>
     </div>
   );
