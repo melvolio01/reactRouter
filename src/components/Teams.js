@@ -4,10 +4,8 @@ import Team from './Team';
 import useTeamNames from '../hooks/useTeamNames';
 import {
   Route,
-  Link,
   Switch,
-  useRouteMatch,
-  useParams
+  useRouteMatch
 } from 'react-router-dom';
 
 const Teams = () => {
