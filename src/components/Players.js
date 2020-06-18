@@ -13,10 +13,8 @@ import Player from './Player.js';
 const Players = () => {
   const location = useLocation()
   const { url } = useRouteMatch()
-  const team = location.search
-    ? parse(location.search).teamId
-    : null
-
+  // slice(1) to remove the leading question mark on location.search
+  const team = location.search ? parse(location.search.slice(1)).teamId : null
   const {
     response: players,
     loading
