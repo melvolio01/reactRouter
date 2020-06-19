@@ -8,6 +8,7 @@ import useTeamNames from '../hooks/useTeamNames';
 import useTeamsArticles from '../hooks/useTeamsArticles';
 import useTeam from '../hooks/useTeam';
 import TeamLogo from './TeamLogo';
+import Loading from './Loading';
 import slug from 'slug';
 
 
@@ -45,7 +46,7 @@ const TeamPage = () => {
     loading
   } = useTeamPageData(teamId)
 
-  if (loading) return <div className="text-center"><h1>Loading...</h1></div>
+  if (loading) return <Loading />
 
   if (!teamNames.includes(teamId)) {
     return (

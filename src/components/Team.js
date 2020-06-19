@@ -5,6 +5,7 @@ import {
 } from 'react-router-dom';
 import useTeam from '../hooks/useTeam';
 import TeamLogo from './TeamLogo';
+import Loading from './Loading';
 
 const Team = () => {
   const { teamId } = useParams()
@@ -13,7 +14,7 @@ const Team = () => {
     loading
   } = useTeam(teamId)
 
-  if (loading) return null
+  if (loading) return <Loading />
 
   return (
     <div className="panel">

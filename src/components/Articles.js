@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import Article from './Article';
+import Loading from './Loading';
 import useTeamsArticles from '../hooks/useTeamsArticles';
 
 const Articles = () => {
@@ -18,7 +19,7 @@ const Articles = () => {
     loading
   } = useTeamsArticles(teamId)
 
-  if (loading) return <div><h2>Loading...</h2></div>
+  if (loading) return <Loading />
 
   return (
     <div className="container two-column">

@@ -1,6 +1,7 @@
 import React from 'react';
 import Sidebar from './Sidebar';
 import Team from './Team';
+import Loading from './Loading';
 import useTeamNames from '../hooks/useTeamNames';
 import {
   Route,
@@ -16,7 +17,7 @@ const Teams = () => {
   const { url } = useRouteMatch()
 
   if (loading) {
-    return (<div className="center-text">Loading...</div>)
+    return <Loading />
   }
 
   return (

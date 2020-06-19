@@ -1,5 +1,6 @@
 import React from 'react';
 import TeamLogo from './TeamLogo';
+import Loading from './Loading';
 import { Link } from 'react-router-dom';
 import useTeamNames from '../hooks/useTeamNames';
 
@@ -9,7 +10,7 @@ const Home = () => {
     response: teamNames
   } = useTeamNames()
 
-  if (loading) return null
+  if (loading) return <Loading />
 
   return (
     <div className="container">

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import useArticle from '../hooks/useArticle';
+import Loading from './Loading';
 
 
 const Article = () => {
@@ -11,7 +12,7 @@ const Article = () => {
     loading
   } = useArticle({ teamId, articleId })
 
-  if (loading) return <div><h2>Loading...</h2></div>
+  if (loading) return <Loading />
   console.log(article)
 
   return (

@@ -9,6 +9,7 @@ import { parse } from 'querystring';
 import usePlayers from '../hooks/usePlayers';
 import Sidebar from './Sidebar';
 import Player from './Player.js';
+import Loading from './Loading';
 
 const Players = () => {
   const location = useLocation()
@@ -21,7 +22,7 @@ const Players = () => {
   } = usePlayers(team)
 
   if (loading) {
-    return <p>Loading...</p>
+    return <Loading />
   }
 
   return (
