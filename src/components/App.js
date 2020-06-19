@@ -8,6 +8,7 @@ import Home from './Home';
 import Players from './Players';
 import Teams from './Teams';
 import TeamPage from './TeamPage';
+import Articles from './Articles';
 import Navbar from './Navbar';
 
 export default function App() {
@@ -27,6 +28,9 @@ export default function App() {
           </Route>
           <Route path='/:teamId' exact>
             <TeamPage />
+          </Route>
+          <Route path="/:teamId/articles">
+            <Articles />
           </Route>
           <Route path="*">
             <h1 className="text-center">404</h1>
